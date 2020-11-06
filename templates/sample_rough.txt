@@ -1,0 +1,183 @@
+# Top 30 Linux commands Used In DevOps
+
+![Image for post](https://miro.medium.com/max/1280/1*v_ZavymAcHotsi6qXfI0oQ.png)
+
+Linux Commands in DevOps — Edureka
+
+Linux fundamentals and Scripting is one of the most essential skills of a DevOps Professional. Most of the companies have their environment on Linux, also many CM tools like — Puppet, Chef and Ansible have their master nodes on Linux. So in this blog, I will be covering the entire command line part which is an essential part of DevOps. The topics that we will cover here are as follows -
+
+So let us get started,
+
+1.  What is Linux?
+2.  Why is Linux popular?
+3.  Linux Commands in DevOps.
+4.  Shell Scripting
+5.  Git Commands
+
+
+
+![Image for post](https://miro.medium.com/max/412/1*h5_y49ncL3FJUOvaypeyfQ.jpeg)
+
+Linux is an open-source and community-developed operating system for computers, servers, mainframes, mobile devices, and embedded devices. It has support on almost every major computer platform including x86, ARM etc, making it one of the most widely supported operating systems.
+
+The design of Linux is similar to UNIX but it has evolved to run on a wide variety of hardware from phones to supercomputers. Every Linux-based OS contains the Linux Kernel-which manages hardware resources-and a set of software packages that make up the rest of the operating system.
+
+Linux is different from the rest of the operating systems in many important aspects. Some of them are as follows
+
+1\. **Free** — First, and perhaps most importantly, Linux is free. You do not have to spend any amount to download and use it, unlike windows.
+
+2\. **Open Source** — Linux is open-source software. The code used to create Linux is free and available to the public to view, edit, and-for users with the appropriate skills-to contribute to.
+
+3\. **Secure** — Once you have Linux installed on your system, there is no need to use an antivirus! Linux is a highly secure system. Moreover, there is a global development community constantly looking at ways to enhance its security. Each upgrade makes the OS becomes more secure and robust.
+
+4\. **Stability and Performance** — Linux provides very high stability i.e. it does not need a reboot after a short period of time. Your Linux system rarely slows down or freezes.You can work without any disturbance on your Linux systems. Linux provides remarkably high performance on various networks and workstations.
+
+In this section, we will have a look at the most frequently used Linux commands that are used while working in DevOps.
+
+**ls**
+------
+
+This command lists all the contents in the current working directory.
+
+**_syntax:_**
+
+_$ ls <flag>_
+
+
+
+![Image for post](https://miro.medium.com/max/2516/1*z4Lg6qo81lnMoHh8VvMlSg.png)
+
+
+![Image for post](https://miro.medium.com/max/1762/1*oqWfy07Dkn6uXz1yKUlwlw.png)
+
+**sudo**
+--------
+
+This command executes only that command with root/ superuser privileges.
+
+**_syntax:_**
+
+_$ sudo <command>_
+
+
+
+![Image for post](https://miro.medium.com/max/2516/1*mP3ql4XKy1HwbFni3i-M2Q.png)
+
+![Image for post](https://miro.medium.com/max/882/1*Stt52XQKNHHOBmfZy98tQw.png)
+
+**cat**
+-------
+
+This command can read, modify or concatenate text files. It also displays file contents.
+
+**_syntax:_**
+
+_$ cat <flag> {filename}_
+
+![Image for post](https://miro.medium.com/max/2516/1*Qb_iMvz94zWkTupfblqkQw.png)
+
+![Image for post](https://miro.medium.com/max/1764/1*WZESfKHjop7OlDPA9eQyqg.png)
+
+**grep**
+--------
+
+This command searches for a particular string/ word in a text file. This is similar to “Ctrl+F” but executed via a CLI.
+
+**_syntax:_**
+
+_$ grep <flag or element\_to\_search> {filename}_
+
+![Image for post](https://miro.medium.com/max/2516/1*0bcLQhO82V2qbEYZM0iJCg.png)
+
+![Image for post](https://miro.medium.com/max/1764/1*ON1kXsie75NQNAs9vBIw3g.png)
+
+**sort**
+--------
+
+This command sorts the results of a search either alphabetically or numerically. It also sorts files, file contents, and directories.
+
+**_syntax:_**
+
+_$ sort <flag> {filename}_
+
+![Image for post](https://miro.medium.com/max/2516/1*1DQHqvhz-d77KSUPm2oBog.png)
+
+![Image for post](https://miro.medium.com/max/2760/1*XKL4fiCs5B0Bgz_4qHh9Aw.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**tail**
+--------
+
+It is complementary to head command. The tail command, as the name implies, print the last N number of data of the given input. By default, it prints the last 10 lines of the specified files. If you give more than one filename, then data from each file precedes by its file name.
+
+**_syntax:_**
+
+_tail \[OPTION\]... \[FILE\]..._
+
+**tail -n 3 state.txt or tail -3 state.txt => -n for no. of lines**
+
+tail +25 state.txt
+
+**\-c num:** Prints the last ‘num’ bytes from the file specified.
+
+**chown**
+---------
+
+Different users in the operating system have ownership and permission to ensure that the files are secure and put restrictions on who can modify the contents of the files. In Linux there are different users who use the system:
+
+*   Each _user_ has some properties associated with them, such as a user ID and a home directory. We can add users into a group to make the process of managing users easier.
+*   A _group_ can have zero or more users. A specified user is associated with a “default group”. It can also be a member of other groups on the system as well.
+
+**Ownership and Permissions:** To protect and secure files and directory in Linux we use permissions to control what a user can do with a file or directory. Linux uses three types of permissions:
+
+*   **Read:** This permission allows the user to read files and in directories, it lets the user read directories and subdirectories stores in it.
+*   **Write:** This permission allows a user to modify and delete a file. Also, it allows a user to modify its contents (create, delete and rename files in it) for the directories. Unless you give the execute permission to directories, changes does not affect them.
+*   **Execute:** The write permission on a file executes the file. For example, if we have a file named _sh_ so unless we don’t give it execute permission it won’t run.
+
+**Types of file Permissions:**
+------------------------------
+
+*   **User:** This type of file permission affects the owner of the file.
+*   **Group:** This type of file permission affects the group which owns the file. Instead of the group permissions, the user permissions will apply if the owner user is in this group.
+*   **Other: This** type of file permission affects all other users on the system.
+
+**Note:** To view the permissions we use:
+
+_ls -l_
+
+**chown** command is used to change the file Owner or group. Whenever you want to change ownership you can use chown command.
+
+**Syntax:**
+
+_chown \[OPTION\]… \[OWNER\]\[:\[GROUP\]\] FILE…__chown \[OPTION\]… –reference=RFILE FILE…_
+
+**Example:** To change owner of the file:
+
+_chown owner\_name file\_name__chown master file1.txt_
+
+where the _master_ is another user in the system. Assume that if you are user named user1 and you want to change ownership to root (where your current directory is user1). use “sudo” before syntax.
+
+_sudo chown root file1.txt_

@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style media="screen">
+  img{
+
+    max-width: 730px
+
+  }
+</style>
+
+
+
+
+<!-- Page Content -->
+<div class="container">
+
+  <div class="row">
+
+    {% for b in blog %}
+    <h1>{{b.name}}</h1>
+    <hr>
+    <!-- Blog Entries Column -->
+    <div class="col-lg-8  mark-down">
+
+
+      {{b.markdown}}
+
+    </div>
+
+      {% endfor %}
+  </div>
+  <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+
+
+
+
+
+<script src=" https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js">	</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/1.2.2/marked.min.js "></script>
+
+<script type="text/javascript">
+
+
+	$(document).ready(function() {
+
+	var content = $(".mark-down").text()
+  console.log(content);
+	var contentMarked= marked(content)
+	console.log(contentMarked);
+	$(".mark-down").html(contentMarked)
+	/*
+	var converter = new showdown.Converter()
+ 	var contentMarked= converter.makeHtml(content)
+	console.log(contentMarked)
+	$(".mark-down").html(contentMarked)
+	*/
+
+
+})
+
+</script>
+
+
+{% endblock %}
